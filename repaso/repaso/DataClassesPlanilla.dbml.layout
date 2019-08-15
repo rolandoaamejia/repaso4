@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.5, 19.75" name="DataClassesPlanilla">
+  <DataContextMoniker Name="/DataClassesPlanillaDataContext" />
+  <nestedChildShapes>
+    <classShape Id="63bbe150-dede-41e1-a9ee-2792ef2a2bbb" absoluteBounds="0.75, 9.75, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/DataClassesPlanillaDataContext/Cargo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f4a0a903-0dc5-4511-a818-adc6a899989d" absoluteBounds="0.765, 10.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4d5ecc49-90bd-4fb1-b6b0-ac98e4c7609b" absoluteBounds="3.5, 9.125, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/DataClassesPlanillaDataContext/Empleado" />
+      <nestedChildShapes>
+        <elementListCompartment Id="67a3e830-959e-4fe8-9523-141c9251a132" absoluteBounds="3.515, 9.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a473f879-dbaa-4b78-ab2c-45f687059084" absoluteBounds="9.25, 9.5, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/DataClassesPlanillaDataContext/HoraExtra" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bd4c3c35-c1e2-433b-9d48-7a06ba819531" absoluteBounds="9.265, 9.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6f2c3855-ece8-4216-bb2f-6eb48b62f010" absoluteBounds="6.25, 8.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DataClassesPlanillaDataContext/HoraFaltada" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1c3d35cd-b9c1-45a8-a183-af0859bef773" absoluteBounds="6.265, 9.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1207ae2c-a989-4da2-8de5-5ff6bfc13d37" absoluteBounds="0.75, 1.75, 2, 1.5785953776041668">
+      <DataClassMoniker Name="/DataClassesPlanillaDataContext/IHSS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e246344a-0a11-44e6-bc58-2f3fe6b9c3b2" absoluteBounds="0.765, 2.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a6136a87-98fb-4688-b5fd-e85b228123c4" absoluteBounds="6.25, 17, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/DataClassesPlanillaDataContext/PlanillaFinal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="85c8c803-d4b3-4b8c-92fe-2fd342480100" absoluteBounds="6.265, 17.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dd7aa948-0a3d-4ecb-860d-7ab7a351aba8" absoluteBounds="6.5, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClassesPlanillaDataContext/PorcentajeHoraExtra" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2f919a68-d6b5-438b-a0c2-49e5b5fc071d" absoluteBounds="6.515, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="99a07c3a-dab6-4086-9154-9566616ac411" absoluteBounds="6.25, 13.875, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/DataClassesPlanillaDataContext/PrestacionLaboral" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab4c89d0-0280-41dd-982c-1a7b0ffc2551" absoluteBounds="6.265, 14.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e5d86f0b-37c9-4548-9cc7-81e6f0680a0a" absoluteBounds="9, 14.25, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/DataClassesPlanillaDataContext/PrestacionLaboralEmbarazo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1a9d0d4a-34eb-4297-ac28-8e2256f256d5" absoluteBounds="9.015, 14.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6d812237-835a-4950-a997-29ffff06c4fa" absoluteBounds="0.75, 4.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DataClassesPlanillaDataContext/RAP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c689b54-9cc6-4335-81c7-859deb1ef6c1" absoluteBounds="0.765, 5.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1989d1db-2d50-469e-bbec-ced5ea5a5554" absoluteBounds="6.25, 3.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesPlanillaDataContext/TelefonoEmpleado" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3946660d-b95c-4e22-91a6-9f3903ceafe8" absoluteBounds="6.265, 4.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8ce0b275-7918-4953-b261-aa566b19fc97" absoluteBounds="6.25, 11.25, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/DataClassesPlanillaDataContext/Usuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e7756e72-efea-4c43-a1d4-7b647c0fcb5e" absoluteBounds="6.265, 11.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 10.4431469726562); (3.5 : 10.4431469726562)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesPlanillaDataContext/Cargo/Cargo_Empleado" />
+      <nodes>
+        <classShapeMoniker Id="63bbe150-dede-41e1-a9ee-2792ef2a2bbb" />
+        <classShapeMoniker Id="4d5ecc49-90bd-4fb1-b6b0-ac98e4c7609b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 10.8854484049479); (9.25 : 10.8854484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesPlanillaDataContext/Empleado/Empleado_HoraExtra" />
+      <nodes>
+        <classShapeMoniker Id="4d5ecc49-90bd-4fb1-b6b0-ac98e4c7609b" />
+        <classShapeMoniker Id="a473f879-dbaa-4b78-ab2c-45f687059084" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.82294840494792); (6.25 : 9.82294840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesPlanillaDataContext/Empleado/Empleado_HoraFaltada" />
+      <nodes>
+        <classShapeMoniker Id="4d5ecc49-90bd-4fb1-b6b0-ac98e4c7609b" />
+        <classShapeMoniker Id="6f2c3855-ece8-4216-bb2f-6eb48b62f010" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 11.6651025390625); (4.5 : 18.2700512695313); (6.25 : 18.2700512695313)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesPlanillaDataContext/Empleado/Empleado_PlanillaFinal" />
+      <nodes>
+        <classShapeMoniker Id="4d5ecc49-90bd-4fb1-b6b0-ac98e4c7609b" />
+        <classShapeMoniker Id="a6136a87-98fb-4688-b5fd-e85b228123c4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.40625 : 2.1362939453125); (8.40625 : 10.7031701074219); (9.25 : 10.7031701074219)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesPlanillaDataContext/PorcentajeHoraExtra/PorcentajeHoraExtra_HoraExtra" />
+      <nodes>
+        <classShapeMoniker Id="dd7aa948-0a3d-4ecb-860d-7ab7a351aba8" />
+        <classShapeMoniker Id="a473f879-dbaa-4b78-ab2c-45f687059084" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.0312525 : 11.6651025390625); (5.0312525 : 15.0489005533854); (6.25 : 15.0489005533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesPlanillaDataContext/Empleado/Empleado_PrestacionLaboral" />
+      <nodes>
+        <classShapeMoniker Id="4d5ecc49-90bd-4fb1-b6b0-ac98e4c7609b" />
+        <classShapeMoniker Id="99a07c3a-dab6-4086-9154-9566616ac411" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 15.1354484049479); (9 : 15.1354484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesPlanillaDataContext/PrestacionLaboral/PrestacionLaboral_PrestacionLaboralEmbarazo" />
+      <nodes>
+        <classShapeMoniker Id="99a07c3a-dab6-4086-9154-9566616ac411" />
+        <classShapeMoniker Id="e5d86f0b-37c9-4548-9cc7-81e6f0680a0a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 9.125); (4.5 : 4.66429768880208); (6.25 : 4.66429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesPlanillaDataContext/Empleado/Empleado_TelefonoEmpleado" />
+      <nodes>
+        <classShapeMoniker Id="4d5ecc49-90bd-4fb1-b6b0-ac98e4c7609b" />
+        <classShapeMoniker Id="1989d1db-2d50-469e-bbec-ced5ea5a5554" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 11.4575512695312); (6.25 : 11.4575512695312)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesPlanillaDataContext/Empleado/Empleado_Usuario" />
+      <nodes>
+        <classShapeMoniker Id="4d5ecc49-90bd-4fb1-b6b0-ac98e4c7609b" />
+        <classShapeMoniker Id="8ce0b275-7918-4953-b261-aa566b19fc97" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
