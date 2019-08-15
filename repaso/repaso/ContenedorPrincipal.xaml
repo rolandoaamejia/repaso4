@@ -1,0 +1,25 @@
+﻿<Window x:Class="repaso.ContenedorPrincipal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:repaso"
+        mc:Ignorable="d"
+        Title="ContenedorPrincipal" Height="450" Width="800">
+    <Grid Background="Crimson">
+        <StackPanel Orientation="Horizontal">
+            <ListBox x:Name="dgUsuarios" Height="auto" Width="250" SelectionChanged="DgUsuarios_SelectionChanged"></ListBox>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBox Name="txtUsuario" Width="250" Height="auto" Margin="10" FontSize="25"></TextBox>
+                <TextBox Name="txtContra" Width="250" Height="auto" Margin="10" FontSize="25"></TextBox>
+
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="btnAgregar" Width="auto" Height="auto" FontSize="25" Margin="5" Click="BtnAgregar_Click">Agregar</Button>
+                    <Button Width="auto" Height="auto" FontSize="25" Margin="5">listar Usuario</Button>
+                    <Button Width="auto" Height="auto" FontSize="25" Margin="5">Actualizar</Button>
+                    <Button Width="auto" Height="auto" FontSize="25" Margin="5">Eliminar</Button>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

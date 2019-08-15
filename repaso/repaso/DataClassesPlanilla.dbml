@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PlanillaDePagoMensual" Class="DataClassesPlanillaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL)\SQLEXPRESS;Initial Catalog=PlanillaDePagoMensual;Integrated Security=True" SettingsObjectName="repaso.Properties.Settings" SettingsPropertyName="PlanillaDePagoMensualConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="Planilla.Cargo" Member="Cargo">
+    <Type Name="Cargo">
+      <Column Name="Codigo" Type="System.String" DbType="Char(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Cargo_Empleado" Member="Empleado" ThisKey="Codigo" OtherKey="CodigoCargo" Type="Empleado" />
+    </Type>
+  </Table>
+  <Table Name="Planilla.Empleado" Member="Empleado">
+    <Type Name="Empleado">
+      <Column Name="Identidad" Type="System.String" DbType="Char(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CodigoCargo" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Genero" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="SueldoOrdinario" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NivelAcademico" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Empleado_HoraExtra" Member="HoraExtra" ThisKey="Identidad" OtherKey="IdentidadEmpleado" Type="HoraExtra" />
+      <Association Name="Empleado_HoraFaltada" Member="HoraFaltada" ThisKey="Identidad" OtherKey="IdentidadEmpleado" Type="HoraFaltada" />
+      <Association Name="Empleado_PlanillaFinal" Member="PlanillaFinal" ThisKey="Identidad" OtherKey="IdentidadEmpleado" Type="PlanillaFinal" />
+      <Association Name="Empleado_PrestacionLaboral" Member="PrestacionLaboral" ThisKey="Identidad" OtherKey="IdentidadEmpleado" Type="PrestacionLaboral" />
+      <Association Name="Empleado_TelefonoEmpleado" Member="TelefonoEmpleado" ThisKey="Identidad" OtherKey="IdentidadEmpleado" Type="TelefonoEmpleado" />
+      <Association Name="Empleado_Usuario" Member="Usuario" ThisKey="Identidad" OtherKey="IdentidadEmpleado" Type="Usuario" />
+      <Association Name="Cargo_Empleado" Member="Cargo" ThisKey="CodigoCargo" OtherKey="Codigo" Type="Cargo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Planilla.HoraExtra" Member="HoraExtra">
+    <Type Name="HoraExtra">
+      <Column Name="Codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdentidadEmpleado" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="TotalHora" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CodigoPorcentajeHoraExtra" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Empleado_HoraExtra" Member="Empleado" ThisKey="IdentidadEmpleado" OtherKey="Identidad" Type="Empleado" IsForeignKey="true" />
+      <Association Name="PorcentajeHoraExtra_HoraExtra" Member="PorcentajeHoraExtra" ThisKey="CodigoPorcentajeHoraExtra" OtherKey="Codigo" Type="PorcentajeHoraExtra" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Planilla.HoraFaltada" Member="HoraFaltada">
+    <Type Name="HoraFaltada">
+      <Column Name="Codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdentidadEmpleado" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="TotalHora" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Motivo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Empleado_HoraFaltada" Member="Empleado" ThisKey="IdentidadEmpleado" OtherKey="Identidad" Type="Empleado" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Planilla.IHSS" Member="IHSS">
+    <Type Name="IHSS">
+      <Column Name="Codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GastosMedicos" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="SalarioTecho" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Planilla.PlanillaFinal" Member="PlanillaFinal">
+    <Type Name="PlanillaFinal">
+      <Column Name="Codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CodigoPlanillaFinal" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IdentidadEmpleado" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="SueldoOrdinario" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="IHSS" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="RAP" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="HorasFaltadas" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="HorasExtras" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="SueldoNeto" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Association Name="Empleado_PlanillaFinal" Member="Empleado" ThisKey="IdentidadEmpleado" OtherKey="Identidad" Type="Empleado" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Planilla.PorcentajeHoraExtra" Member="PorcentajeHoraExtra">
+    <Type Name="PorcentajeHoraExtra">
+      <Column Name="Codigo" Type="System.String" DbType="Char(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TipoHora" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PorcentajeHoraExtra_HoraExtra" Member="HoraExtra" ThisKey="Codigo" OtherKey="CodigoPorcentajeHoraExtra" Type="HoraExtra" />
+    </Type>
+  </Table>
+  <Table Name="Planilla.PrestacionLaboral" Member="PrestacionLaboral">
+    <Type Name="PrestacionLaboral">
+      <Column Name="Codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdentidadEmpleado" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Cesantia" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Vacaciones" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="DecimoTercero" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="DecimoCuarto" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Motivo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PrestacionLaboral_PrestacionLaboralEmbarazo" Member="PrestacionLaboralEmbarazo" ThisKey="Codigo" OtherKey="Codigo" Type="PrestacionLaboralEmbarazo" Cardinality="One" />
+      <Association Name="Empleado_PrestacionLaboral" Member="Empleado" ThisKey="IdentidadEmpleado" OtherKey="Identidad" Type="Empleado" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Planilla.PrestacionLaboralEmbarazo" Member="PrestacionLaboralEmbarazo">
+    <Type Name="PrestacionLaboralEmbarazo">
+      <Column Name="Codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdentidadEmpleado" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Prenatal" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Lactancia" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PrestacionLaboral_PrestacionLaboralEmbarazo" Member="PrestacionLaboral" ThisKey="Codigo" OtherKey="Codigo" Type="PrestacionLaboral" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Planilla.RAP" Member="RAP">
+    <Type Name="RAP">
+      <Column Name="Codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Techo" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Planilla.TelefonoEmpleado" Member="TelefonoEmpleado">
+    <Type Name="TelefonoEmpleado">
+      <Column Name="Codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdentidadEmpleado" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Empleado_TelefonoEmpleado" Member="Empleado" ThisKey="IdentidadEmpleado" OtherKey="Identidad" Type="Empleado" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Planilla.Usuario" Member="Usuario">
+    <Type Name="Usuario">
+      <Column Name="Codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Usuario" Member="Usuario1" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Contraseña" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="IdentidadEmpleado" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Empleado_Usuario" Member="Empleado" ThisKey="IdentidadEmpleado" OtherKey="Identidad" Type="Empleado" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

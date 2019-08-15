@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:repaso"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="Gray">
+        <StackPanel Orientation="Vertical" Margin="40">
+            <TextBox Name="txtUser" Width="250" Height="auto" FontSize="25" Margin="15"/>
+
+            <PasswordBox x:Name="pwbContra" Width="250" Height="auto" FontSize="25" Margin="15"></PasswordBox>
+
+            <Button x:Name="btnIniciar" Width="250" Height="auto" FontSize="25" Margin="15" Click="BtnIniciar_Click" >iniciar sesion</Button>
+        </StackPanel>
     </Grid>
 </Window>
